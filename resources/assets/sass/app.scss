@@ -7,3 +7,10 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Bootswatch Simple
+@import "bootswatch";
+
+// Custom styles
+@import "./base.scss";
+@import "./footer-copyright.scss";
