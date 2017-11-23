@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'BaseController@index')->name('home');
+
+// Controller for updating user personal information.
+Route::get('/user/update', 'UpdatePersonalInformationController@index')->name('user_update');
+Route::post('/user/update', 'UpdatePersonalInformationController@update')->name('user_update_returned');
