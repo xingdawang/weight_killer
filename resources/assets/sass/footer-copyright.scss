@@ -1,10 +1,6 @@
-// Variables
-@import "variables";
-
 .bottom-copyright {
-	//margin-bottom: $bottom-margin;
+	bottom: $bottom-margin;
 	position: fixed;
 	left: 0px;
-	bottom: 20px;
 	width: 100%;
 }
