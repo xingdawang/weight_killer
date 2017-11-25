@@ -14,17 +14,16 @@
                         <!-- User height -->
                         <div class="form-group{{ $errors->has('height') ? ' has-error' : '' }}">
                             <label for="height" class="col-md-4 control-label">Height</label>
-
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input id="height" type="text" class="form-control" name="height" value="{!! $current_user_height !!}" autofocus>
+                                    <input id="height" type="text" class="form-control" name="height" value="{!! $current_user_height !!}" placeholder="e.g. 180" autofocus>
                                     <span class="input-group-addon" id="height-addon1">cm</span>
-                                    @if ($errors->has('height'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('height') }}</strong>
-                                        </span>
-                                    @endif
                                 </div>
+                                @if ($errors->has('height'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('height') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -33,16 +32,17 @@
                             <label for="birthdate" class="col-md-4 control-label">Birth Date</label>
                             <div class="col-md-6">
                                 <div class='input-group date' id='user_birthdate'>
-                                    <input id="birthdate" type='text' class="form-control" name="birthdate" value={!! $current_user_birthdate !!}>
+                                    <input id="birthdate" type='text' class="form-control" name="birthdate" value="{!! $current_user_birthdate !!}" placeholder="YYYY-MM-DD" >
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
-                                    @if ($errors->has('birthdate'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('birthdate') }}</strong>
-                                        </span>
-                                    @endif
                                 </div>
+                                @if ($errors->has('birthdate'))
+                                    <br>
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('birthdate') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

@@ -41,7 +41,7 @@ class UpdatePersonalInformationController extends Controller
         // dd($request);
         // Check validation of the input method.
         $request->validate([
-            'height' => 'numeric',
+            'height' => 'integer',
             'birthdate' => 'date',
             'sex' => 'string',
         ]);
@@ -72,7 +72,7 @@ class UpdatePersonalInformationController extends Controller
         $current_user_birthdate = $current_user->birth_date;
         $current_user_sex = $current_user->sex;
         // dd($current_user);
-        return view('update', compact(
+        return view('users.profile', compact(
             'current_user_height',
             'current_user_birthdate',
             'current_user_sex'
