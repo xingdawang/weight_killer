@@ -25,8 +25,8 @@ Route::get('/home', function () {
 Route::get('/user/update', 'UpdatePersonalInformationController@index')->name('user_update');
 // Routing for updating user personal information.
 Route::post('/user/update', 'UpdatePersonalInformationController@update')->name('user_update_returned');
-// Routing for prompting user missing profile. UNDONE
-Route::get('/user/bmi', 'UserHealthController@get_today_bmi');
+// Routing for showing user body mass index (BMI)
+Route::get('/user/bmi', 'UserHealthController@get_today_bmi')->name('user_bmi');
 
 // Routing for showing add weight page.
 Route::get('user/weight', 'UserHealthController@add_today_weight')->name('user_view_weight');

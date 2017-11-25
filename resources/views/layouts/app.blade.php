@@ -47,6 +47,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ route('user_update') }}">Profile</a></li>
                                     <li><a href="{{ route('user_view_weight') }}">Record today</a></li>
+                                    <li><a href="{{ route('user_bmi') }}">Body Mass Index</a></li>
                                     <li><div class="dropdown-divider"></div></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
