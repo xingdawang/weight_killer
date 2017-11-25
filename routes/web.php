@@ -27,7 +27,8 @@ Route::get('/user/update', 'UpdatePersonalInformationController@index')->name('u
 Route::post('/user/update', 'UpdatePersonalInformationController@update')->name('user_update_returned');
 // Routing for showing user body mass index (BMI)
 Route::get('/user/bmi', 'UserHealthController@get_today_bmi')->name('user_bmi');
-
+// Routing for showing user body fat percentage (BFP)
+Route::get('/user/bfp', 'UserHealthController@get_today_bfp')->name('user_bfp');
 // Routing for showing add weight page.
 Route::get('user/weight', 'UserHealthController@add_today_weight')->name('user_view_weight');
 // Routing for adding user today weight.

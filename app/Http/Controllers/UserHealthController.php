@@ -148,7 +148,34 @@ class UserHealthController extends Controller
     		$avg_today_bmi = $all_bmi_today->avg('body_mass_index');
     		return view('users.today_bmi', compact('avg_today_bmi'));
     	}
+    }
 
+    /**
+     * Return today user bfp.
+     *
+     * @return \Illuminate\Http\Response
+	 */
+    public function get_today_bfp() {
+    	$current_user = auth()->user();
+    	$current_user_id = $current_user->id;
+    	$current_user_sex = $current_user->sex;
+		$all_bfp_today = DB::table('user_health')
+			->select('body_fat_percentage')
+			->where([
+				['user_id', '=', $current_user_id],
+				[ 'created_at', 'LIKE', DATE('Y-m-d').'%']
+			])
+			->get();
+
+		// If user is missing profile or missing today value, let them know.
+    	if(!$this->valide_profile()) {
+    		return view('errors.user_profile_needed');
+    	} elseif (empty($all_bfp_today[0])) {
+    		return view('errors.user_missing_today_bfp');
+    	} else {
+    		$avg_today_bfp = $all_bfp_today->avg('body_fat_percentage');
+    		return view('users.today_bfp', compact('avg_today_bfp', 'current_user_sex'));
+    	}
     }
 
 }

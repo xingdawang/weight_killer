@@ -24,5 +24,6 @@ const app = new Vue({
 // Add custom JavaScript files
 require('./bootstrap-datepicker.js');
 
-// Introduce google charts
+// Introduce google charts for user bmi and bfp
 require('./user-bmi.js');
+require('./user-bfp.js');
