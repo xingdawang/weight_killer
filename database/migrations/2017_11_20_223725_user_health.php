@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UserWeights extends Migration
+class UserHealth extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class UserWeights extends Migration
      */
     public function up()
     {
-        Schema::create('user_weights', function(Blueprint $table){
+        Schema::create('user_health', function(Blueprint $table){
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->float('weight');
@@ -30,6 +30,6 @@ class UserWeights extends Migration
      */
     public function down()
     {
-        Schema::drop('user_weights');
+        Schema::drop('user_health');
     }
 }
