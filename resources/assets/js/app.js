@@ -27,3 +27,4 @@ require('./bootstrap-datepicker.js');
 // Introduce google charts for user bmi and bfp
 require('./user-bmi.js');
 require('./user-bfp.js');
+require('./user_weight_trendline.js');

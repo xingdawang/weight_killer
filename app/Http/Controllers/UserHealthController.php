@@ -178,4 +178,25 @@ class UserHealthController extends Controller
     	}
     }
 
+
+    /**
+     * Return user weight, bmi and bfp.
+     *
+     * @return \Illuminate\Http\Response
+	 */
+    public function get_weight_trendline() {
+    	$current_user = auth()->user();
+    	$current_user_id = $current_user->id;
+
+    	// Retrieve user data
+    	$user_weights = DB::table('user_health')
+    		->select('weight', 'created_at')
+    		->where('user_id', '=', $current_user_id)
+    		->orderBy('created_at', 'asc')
+    		->get();
+
+    	return view('users.trendline', compact('user_weights'));
+
+    }
+
 }
