@@ -4,17 +4,17 @@
 <div class="jumbotron jumbotron-fluid">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-md-left one-third">
+			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div id="user_today_bfp_value" value = "{{ $avg_today_bfp }}"></div>
 				<div id="user_today_sex_value" value = "{{ $current_user_sex }}"></div>
-				<div id="user_today_bfp" style="width: 300px; height: 300px;"></div>
+				<div class="center-block"  id="user_today_bfp" style="width: 300px; height: 300px;"></div>
 			</div>
-			<div class="col-md-12 text-md-right two-thirds">
-				<table class="wikitable">
+			<div class="col-xs-12 col-sm-6 col-md-8">
+				<table class="wikitable  col-center-block">
 					<tbody><tr>
 						<th scope="col" width="110">Description</th>
-						<th scope="col" width="80">Women</th>
-						<th scope="col" width="80">Men</th>
+						<th style="text-align: center;" scope="col" width="80">Women</th>
+						<th style="text-align: center;" scope="col" width="80">Men</th>
 					</tr>
 					<tr>
 						<td>Essential fat</td>
