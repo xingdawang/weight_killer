@@ -52,3 +52,27 @@ google.charts.load('current', {
   },
   packages:['gauge']
 });
+
+
+var bmi = $('#user_today_bmi_value').attr('value');
+var index = 0;
+if(bmi >= 0 && bmi<= 15){
+  index = 1;
+}else if(bmi > 15 && bmi <= 16){
+  index = 2;
+}else if(bmi > 16 && bmi <= 18.5){
+  index = 3;
+}else if(bmi > 18.5 && bmi <= 25){
+  index = 4;
+}else if(bmi > 25 && bmi <= 30){
+  index = 5;
+}else if(bmi > 30 && bmi <= 35){
+  index = 6;
+}else if(bmi > 35 && bmi <= 40){
+  index = 7;
+}else{
+  index = 8;
+}
+$("#bmi tbody tr:gt(0):eq("+ index +")").css("background-color", "#bbf");
+
+

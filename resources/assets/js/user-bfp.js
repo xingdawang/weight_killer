@@ -69,3 +69,38 @@ google.charts.load('current', {
   },
   packages:['gauge']
 });
+
+var bfp = $('#user_today_bfp_value').attr('value');
+var gender = $('#user_today_sex_value').attr('value');
+var col = (gender == "Male") ? 2 : 1;
+var index_bfp = 0;
+if(col == 1) {
+  if(bfp >= 10 && bfp <= 13){
+    index_bfp = 0;
+  }else if(bfp > 13 && bfp <= 20){
+    index_bfp = 1;
+  }else if(bfp > 20 && bfp <= 25){
+    index_bfp = 2;
+  }else if(bfp > 25 && bfp <= 31){
+    index_bfp = 3;
+  }else if(bfp > 31 && bfp <= 39){
+    index_bfp = 4;
+  }else{
+    index_bfp = 5;
+  }
+}else {
+  if(bfp >= 3 && bfp <= 6){
+      index_bfp = 0;
+    }else if(bfp > 6 && bfp <= 13){
+      index_bfp = 1;
+    }else if(bfp > 13 && bfp <= 17){
+      index_bfp = 2;
+    }else if(bfp > 17 && bfp <= 22){
+      index_bfp = 3;
+    }else if(bfp > 22 && bfp <= 29){
+      index_bfp = 4;
+    }else{
+      index_bfp = 5;
+    }
+}
+$("#bfp tbody tr:gt(0):eq(" + index_bfp + ") td:eq(" + col + ")").css("background-color", "#bbf");
