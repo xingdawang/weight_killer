@@ -4,12 +4,12 @@
 <div class="jumbotron jumbotron-fluid">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-md-left one-third">
+			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div id="user_today_bmi_value" value = "{{ $avg_today_bmi }}"></div>
-				<div id="user_today_bmi" style="width: 300px; height: 300px;"></div>
+					<div class="center-block" id="user_today_bmi" style="width: 300px; height: 300px;"></div>
 			</div>
-			<div class="col-md-12 text-md-right two-thirds">
-				<table class="wikitable">
+			<div class="col-xs-12 col-sm-6 col-md-8">
+				<table class="wikitable  col-center-block">
 				  <tr>
 				    <th>Category</th>
 				    <th colspan="2">BMI (kg/m<sup>2</sup>)</th>
@@ -61,8 +61,7 @@
 				  </tr>
 				</table>
 			</div>
-		</div>
-		
+		</div>	
 	</div>
 </div>
 @endsection
