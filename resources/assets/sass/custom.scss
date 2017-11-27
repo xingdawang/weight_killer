@@ -1,9 +1,9 @@
 /* User BMI, BFP table*/
 .wikitable {
-	background-color: #f8f9fa;
-	color: #222;
-	margin: 1em 0;
-	border: 1px solid #a2a9b1;
+	background-color: $wikitable-bg-color;
+	color: $table_font_color;
+	margin: $table_margin;
+	border: $wikitable_border;
 	border-collapse: collapse;
 
 	tbody {
@@ -18,13 +18,18 @@
 		}
 
 		tr > th, td {
-			border: 1px solid #a2a9b1;
-			padding: 0.2em 0.4em;
+			border: $wikitable_border;
+			padding: $table_cell_padding;
 		}
 	}
 }
 
+/* Change the color in the wikitable */
+.selected-row{
+	background-color: $selected_row_color;
+}
+
 /* Google Trendline Error*/
 #google-visualization-errors-all-1, #google-visualization-errors-all-3 {
-	display: none !important;	
+	display: none !important;
 }
