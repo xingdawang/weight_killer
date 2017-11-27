@@ -1,6 +1,6 @@
 .dropdown-divider {
     height: 0;
-    margin: .5rem 0;
+    margin: $dropdown_divider_margin;
     overflow: hidden;
-    border-top: 1px solid #e9ecef;
+    border-top: $dropdown_divider;
 }
