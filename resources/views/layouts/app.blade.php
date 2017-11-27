@@ -52,6 +52,7 @@
                                 <li><a href="{{ route('user_view_weight') }}">Record today</a></li>
                                 <li><a href="{{ route('user_bmi') }}">Body Mass Index</a></li>
                                 <li><a href="{{ route('user_bfp') }}">Body Fat Percentage</a></li>
+                                 <li><a href="{{ route('user_weight_trendline') }}">Trendline</a></li>
                                 <li><div class="dropdown-divider"></div></li>
                                 <li>
                                     <a href="{{ route('logout') }}"
