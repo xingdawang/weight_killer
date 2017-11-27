@@ -9,7 +9,7 @@
 					<div class="center-block" id="user_today_bmi" style="width: 300px; height: 300px;"></div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-8">
-				<table class="wikitable  col-center-block">
+				<table id="bmi" class="wikitable  col-center-block">
 				  <tr>
 				    <th>Category</th>
 				    <th colspan="2">BMI (kg/m<sup>2</sup>)</th>
