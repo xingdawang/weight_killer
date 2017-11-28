@@ -51,7 +51,7 @@
                             <label for="sex" class="col-md-4 control-label">Sex</label>
 
                             <div class="col-md-6">
-                                <select  id="sex" class="form-control" name="sex">
+                                <select id="sex" class="form-control" name="sex" @if( $current_user_sex !== NULL ) disabled="disabled" @endif >
                                     <option> </option>
                                     <option @if( $current_user_sex === "Male") selected="selected" @endif >Male</option>
                                     <option @if( $current_user_sex === "Female") selected="selected" @endif >Female</option>
