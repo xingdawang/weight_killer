@@ -88,7 +88,16 @@ class UserHealthController extends Controller
                 'weight' => $weight,
                 'created_at' => $added_time
             ]);
-        return view('welcome');
+
+        // Forward user to trendline page.
+            // Retrieve user data
+    	$user_weights = DB::table('user_health')
+    		->select('weight', 'created_at')
+    		->where('user_id', '=', $current_user->id)
+    		->orderBy('created_at', 'asc')
+    		->get();
+
+    	return view('users.trendline', compact('user_weights'));
     }
 
     /**
