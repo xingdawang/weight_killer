@@ -17,10 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', function () {
-    return redirect('/');
-});
-
 // Routing for viewing user personal information.
 Route::get('/user/update', 'UpdatePersonalInformationController@index')->name('user_update');
 // Routing for updating user personal information.
