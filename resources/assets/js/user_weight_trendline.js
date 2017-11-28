@@ -22,10 +22,11 @@ function drawDashboard() {
     'chartType': 'ScatterChart',
     'containerId': 'chart_div',
     'options': {
-      'title': 'Days and weights!',
+      vAxis: {title: 'Weight'},
       'trendlines': { 0: {
         'tooltip': false,
-      } }
+      } }, 
+      legend: 'none'
     }
   });
   
