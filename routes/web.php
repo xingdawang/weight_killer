@@ -31,3 +31,4 @@ Route::get('user/weight', 'UserHealthController@add_today_weight')->name('user_v
 Route::post('user/store-weight', 'UserHealthController@store_today_weight')->name('user_record_weight');
 // Rouring for timeline user weight, bmi and bfp.
 Route::get('/user/trendline', 'UserHealthController@get_weight_trendline')->name('user_weight_trendline');
+Route::get('/sitemap', 'SitemapController@index');
