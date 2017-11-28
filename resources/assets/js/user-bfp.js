@@ -20,21 +20,21 @@ google.charts.load('current', {
       if(user_today_bfp === "Male") {
           options = {
           width: 300, height: 300,
-          redFrom: 30, redTo: 45,
-          yellowFrom: 22, yellowTo: 30,
-          greenFrom: -5, greenTo: 22,
-          majorTicks : ['5','10','15','20','25','30','35','40','45','50'], minorTicks: 5,
+          redFrom: 29, redTo: 45,
+          yellowFrom: 22, yellowTo: 29,
+          greenFrom: 0, greenTo: 22,
+          majorTicks : ['0','5','10','15','20','25','30','35','40','45'], minorTicks: 5,
           animation:{
             duration: 1000,
             easing: 'inAndOut'
           },
-          max: 40, min: 0
+          max: 45, min: 0
         };
       } else {
         var options = {
           width: 300, height: 300,
-          redFrom: 40, redTo: 55,
-          yellowFrom: 31, yellowTo: 40,
+          redFrom: 39, redTo: 55,
+          yellowFrom: 31, yellowTo: 39,
           greenFrom: 5, greenTo: 31,
           majorTicks : ['10','15','20','25','30','35','40','45','50'], minorTicks: 5,
           animation:{
