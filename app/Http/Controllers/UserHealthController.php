@@ -72,7 +72,7 @@ class UserHealthController extends Controller
     public function store_today_weight(Request $request) {
 
     	if(!$this->valide_profile()) {
-    		return view('users.profile_needed');
+    		return view('errors.user_profile_needed');
     	}
     	
     	$added_time = date('Y-m-d') . '-' . $request->weight_added_time . ":" . date('s');
@@ -88,7 +88,7 @@ class UserHealthController extends Controller
                 'weight' => $weight,
                 'created_at' => $added_time
             ]);
-        return view('home');
+        return view('welcome');
     }
 
     /**
