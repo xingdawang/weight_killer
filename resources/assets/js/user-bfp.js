@@ -23,12 +23,12 @@ google.charts.load('current', {
           redFrom: 29, redTo: 45,
           yellowFrom: 22, yellowTo: 29,
           greenFrom: 0, greenTo: 22,
-          majorTicks : ['0','5','10','15','20','25','30','35','40','45'], minorTicks: 5,
+          majorTicks : ['0','4','8','12','16','20','24','28','32','36'], minorTicks: 4,
           animation:{
             duration: 1000,
             easing: 'inAndOut'
           },
-          max: 45, min: 0
+          max: 36, min: 0
         };
       } else {
         var options = {
