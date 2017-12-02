@@ -36,7 +36,9 @@ function drawDashboard() {
   data.addColumn('number', 'Weight(Kg)');
   var user_weights = JSON.parse($('#user_weights').html());
   for (var i = 0; i < user_weights.length; i++) {
-    data.addRow([new Date(user_weights[i]['created_at']), user_weights[i]['weight']]);
+    timestamp = user_weights[i]['created_at'];
+    date = timestamp.split(' ');
+    data.addRow([new Date(date[0]), user_weights[i]['weight']]);
   }
 
   // Trendline may cause data empty. hide errors from user.
