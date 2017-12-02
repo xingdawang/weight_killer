@@ -44,7 +44,7 @@ class UpdatePersonalInformationController extends Controller
             'name' => 'string',
             'height' => 'integer',
             'birthdate' => 'date',
-            'sex' => 'string',   
+            'sex' => 'string',
         ]);
 
         $current_user_name = $request->name;
@@ -52,7 +52,6 @@ class UpdatePersonalInformationController extends Controller
         $current_user_birthdate = $request->birthdate;
         $current_user_sex = is_null($request->sex) ? auth()->user()->sex : $request->sex;
         $current_user_id = auth()->user()->id;
-        // dd(auth()->user());
         
         // Insert personal information into the database.
         DB::table('users')
