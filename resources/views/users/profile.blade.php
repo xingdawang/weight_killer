@@ -64,7 +64,6 @@
                         <!-- User sex -->
                         <div class="form-group{{ $errors->has('sex') ? ' has-error' : '' }}">
                             <label for="sex" class="col-md-4 control-label">Sex</label>
-
                             <div class="col-md-6">
                                 <select id="sex" class="form-control" name="sex" @if( $current_user_sex !== NULL ) disabled="disabled" @endif >
                                     <option> </option>
