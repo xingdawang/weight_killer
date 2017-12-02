@@ -72,12 +72,12 @@
             </div><!-- /.container-fluid -->
         </nav>
         @yield('content')
-        <footer class="footer">
-            <div class='links flex-center footer-copyright'>© {{ date('Y') }} 
-                <a href="mailto:{{ config('constants.author_email') }}"> {{ config('constants.author_name') }}</a>  
-                    All Rights Reserved.
-            </div>
-        </footer>
+       <footer class="footer">
+             <div class='links flex-center footer-copyright'>© {{ date('Y') }}  
+                <a href="{{ url('/contact_us') }}">CONTACT US</a>  
+                     All Rights Reserved.
+             </div>
+         </footer>
     </div>
 </div>
 <!-- Scripts -->

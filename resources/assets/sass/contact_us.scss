@@ -1,0 +1,27 @@
+#map {
+	height: $map_height;
+	width: 100%;
+}
+.contact_us {
+ 	margin: $contact_us_margin;
+ 	color: $body_font_color;
+ 	font-size:$contact_us_font_size;
+  	padding: $contact_us_padding;
+ 
+  	.details {
+  	
+ 		.details_title {
+ 			font-size: $details_title_size;
+ 		}
+ 		.details_content {
+ 			font-size: $details_content_size;
+ 			margin: $details_content_margin;
+ 		}
+  		a {
+        	color: $body_font_color;
+        	padding: $nav_padding;
+        	font-size: $nav_font_size;
+        	text-decoration: none;
+	    }
+  	}
+} 

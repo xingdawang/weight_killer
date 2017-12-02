@@ -29,6 +29,13 @@ Route::get('/user/bfp', 'UserHealthController@get_today_bfp')->name('user_bfp');
 Route::get('user/weight', 'UserHealthController@add_today_weight')->name('user_view_weight');
 // Routing for adding user today weight.
 Route::post('user/store-weight', 'UserHealthController@store_today_weight')->name('user_record_weight');
-// Rouring for timeline user weight, bmi and bfp.
+// Routing for timeline user weight, bmi and bfp.
 Route::get('/user/trendline', 'UserHealthController@get_weight_trendline')->name('user_weight_trendline');
 Route::get('/sitemap', 'SitemapController@index');
+// Routing for viewing contact_us 
+Route::get('/contact_us', function () {
+    return view('contact_us');
+}); 
+// Routing for get google map
+Route::get('/contact_us', 'MapController@index');
+
