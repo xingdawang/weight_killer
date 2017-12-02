@@ -42,6 +42,7 @@ class UserHealthController extends Controller
         	'height_status' => isset($current_user->height),
         	'birthdate_status' => isset($current_user->birth_date),
         	'sex_status' => isset($current_user->sex),
+            
         );
 
 

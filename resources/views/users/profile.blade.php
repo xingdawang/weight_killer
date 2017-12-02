@@ -11,12 +11,27 @@
                         {!! Form::open(['url' => 'user/update', 'class' => 'form-horizontal']) !!}
                         {{ csrf_field() }}
 
+                        <!-- User name -->
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <div class="col-md-6">
+                                <div class="input-group" style="width: 100%;">
+                                    <input id="name" class="form-control" style="border-radius:5px" type="text"  name="name" value="{!! $current_user_name !!}" placeholder="e.g. Your Name" autofocus>
+                                </div>
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <!-- User height -->
                         <div class="form-group{{ $errors->has('height') ? ' has-error' : '' }}">
                             <label for="height" class="col-md-4 control-label">Height</label>
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input id="height" type="text" class="form-control" name="height" value="{!! $current_user_height !!}" placeholder="e.g. 180" autofocus>
+                                    <input id="height" type="text" class="form-control" name="height" value="{!! $current_user_height !!}" placeholder="e.g. 180">
                                     <span class="input-group-addon" id="height-addon1">cm</span>
                                 </div>
                                 @if ($errors->has('height'))
