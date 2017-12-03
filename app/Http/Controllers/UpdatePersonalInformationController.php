@@ -60,7 +60,7 @@ class UpdatePersonalInformationController extends Controller
                 'name' => $current_user_name,
                 'height' => $current_user_height,
                 'birth_date' => $current_user_birthdate,
-                'sex' => $current_user_sex,            
+                'sex' => $current_user_sex,
             ]);
         return view('welcome');
     }
