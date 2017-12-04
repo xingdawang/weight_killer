@@ -44,7 +44,6 @@ class UserHealthController extends Controller
         	'sex_status' => isset($current_user->sex),
         );
 
-
         foreach ($user_status as $status) {
         	if($status == false) {
         		return false;
