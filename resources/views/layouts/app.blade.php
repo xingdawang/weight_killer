@@ -30,8 +30,7 @@
 </head>
 <body>
 
-<div class="container">
-    <div id="app">
+
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -81,18 +80,23 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
+<div class="container">
+    <div id="app">
         @yield('content')
-       <footer class="footer">
-             <div class='links flex-center footer-copyright'>© {{ date('Y') }}  
-                <a href="{{ url('/contact_us') }}">CONTACT US</a>  
-                     All Rights Reserved.
-             </div>
-         </footer>
     </div>
 </div>
+
+<footer class="footer">
+    <div class='links flex-center footer-copyright'>©{{ date('Y') }}  
+        <a href="{{ url('/contact_us') }}">CONTACT US</a>  
+        All Rights Reserved.
+    </div>
+</footer>
+
+
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
-
 
 <!-- Bootstrap datepicker -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>

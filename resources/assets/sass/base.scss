@@ -1,10 +1,10 @@
-html, body {
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
     color: $body_font_color;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    margin: 0;
-    padding: 0;
-    height: 100%;
 
     .full-height {
         height: $title_full_height;
@@ -43,18 +43,13 @@ html, body {
         margin-bottom: $title_margin_bottom;
     }
 
-    .container {
-        position: relative;
-        margin: 0 auto;
-        height: auto !important;
-        height: 100%; 
-        min-height: 100%;
-    }
-
     .footer {
         position: absolute; 
         width: 100%;
         bottom: 0;
+        background-color: $footer_background_color;
+        overflow: hidden;
+        text-align: center;
     }
 
     .col-center-block{  
