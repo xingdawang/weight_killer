@@ -67,10 +67,10 @@
             <div class="form-group{{ $errors->has('sex') ? ' has-error' : '' }}">
                 <label for="sex" class="col-md-4 control-label">Sex</label>
                 <div class="col-md-6">
-                    <select id="sex" class="form-control" name="sex" @if( $current_user_sex !== NULL ) disabled="disabled" @endif >
+                    <select id="sex" class="form-control" name="sex" @if( $current_user_sex !== NULL ) disabled @endif >
                         <option> </option>
-                        <option @if( $current_user_sex === "Male") selected="selected" @endif >Male</option>
-                        <option @if( $current_user_sex === "Female") selected="selected" @endif >Female</option>
+                        <option value="Male" @if( $current_user_sex === "Male") selected="selected" @endif >Male</option>
+                        <option value="Female" @if( $current_user_sex === "Female") selected="selected"  @endif >Female</option>
                     </select>
 
                     @if ($errors->has('sex'))

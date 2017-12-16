@@ -38,13 +38,15 @@ class UpdatePersonalInformationController extends Controller
      */
     protected function update(Request $request)
     {
-        // dd($request);
         // Check validation of the input method.
         $request->validate([
             'name' => 'string',
             'height' => 'integer',
             'birthdate' => 'date',
-            'sex' => 'string',
+            'sex' => array(
+                'string',
+                'regex:/Male|Female/'
+            ),
         ]);
 
         $current_user_name = $request->name;
