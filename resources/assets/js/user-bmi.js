@@ -55,29 +55,27 @@ google.charts.load('current', {
 
 
 var bmi = $('#user_today_bmi_value').attr('value');
+console.log(bmi);
 var index = -1;
 if(bmi >= 0 && bmi<= 15) {
-  index = 1;
+  index = 0;
 }else if(bmi > 15 && bmi <= 16) {
-  index = 2;
+  index = 1;
 }else if(bmi > 16 && bmi <= 18.5) {
-  index = 3;
+  index = 2;
 }else if(bmi > 18.5 && bmi <= 25) {
-  index = 4;
+  index = 3;
 }else if(bmi > 25 && bmi <= 30) {
-  index = 5;
+  index = 4;
 }else if(bmi > 30 && bmi <= 35) {
-  index = 6;
+  index = 5;
 }else if(bmi > 35 && bmi <= 40) {
-  index = 7;
+  index = 6;
 }else if(bmi > 40){
-  index = 8;
+  index = 7;
 }else{
   index = -1;
 }
 if(index != -1){
   $("#bmi tbody tr:gt(0):eq("+ index +")").addClass("selected-row"); 
 }
-
-
-
