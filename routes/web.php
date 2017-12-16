@@ -11,12 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
+Route::get('/', function () {
+	return view('welcome');
+});
+// Routing for redirect home url 
+Route::get('/home', function () {
+	return redirect('/');
+});
 // Routing for viewing user personal information.
 Route::get('/user/update', 'UpdatePersonalInformationController@index')->name('user_update');
 // Routing for updating user personal information.
@@ -38,8 +41,7 @@ Route::get('/sitemap.xml', function(){
 });
 // Routing for viewing contact_us 
 Route::get('/contact_us', function () {
-    return view('contact_us');
-}); 
+	return view('contact_us');
+});
 // Routing for get google map
 Route::get('/contact_us', 'MapController@index');
-
