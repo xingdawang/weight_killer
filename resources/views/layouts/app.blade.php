@@ -87,10 +87,12 @@
     </div>
 </div>
 
-<footer class="footer">
-    <div class='links flex-center footer-copyright'>©{{ date('Y') }}  
-        <a href="{{ url('/contact_us') }}">CONTACT US</a>  
-        All Rights Reserved.
+<footer>
+    <div class="content">
+        <div class='links flex-center footer-copyright'>©{{ date('Y') }}  
+            <a href="{{ url('/contact_us') }}">CONTACT US</a>  
+            All Rights Reserved.
+        </div>
     </div>
 </footer>
 
