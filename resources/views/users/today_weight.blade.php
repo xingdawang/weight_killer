@@ -5,7 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Update Today Weight</div>
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        Update Today Weight
+                    </div>
+                </div>
 
                 <div class="panel-body">
                         {!! Form::open(['url' => 'user/store-weight', 'class' => 'form-horizontal']) !!}
@@ -17,7 +21,7 @@
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <input id="weight" type="text" class="form-control" name="weight" autofocus>
-                                    <span class="input-group-addon" id="weight-addon1">kg</span>
+                                    <span class="input-group-addon" id="weight-update">kg</span>
                                 </div>
                                 @if ($errors->has('weight'))
                                     <span class="help-block">

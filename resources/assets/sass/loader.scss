@@ -1,0 +1,15 @@
+.loader {
+  border: $loader_border;
+  border-radius: $loader_radius;
+  border-top: $loader_border_top;
+  width: $loader_size;
+  height: $loader_size;
+  margin: $loader_margin;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

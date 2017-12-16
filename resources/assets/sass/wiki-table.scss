@@ -1,0 +1,21 @@
+.wikitable {
+	background-color: $wikitable-bg-color;
+	color: $table_font_color;
+	margin: $table_margin;
+	border: $wikitable_border;
+	border-collapse: collapse;
+
+	thead, tbody {
+		display: table-row-group;
+		vertical-align: middle;
+		border-color: inherit;
+
+		tr > th, td {
+			border: $wikitable_border;
+			padding: $table_cell_padding;
+			font-size: $default_font_size;
+			font-weight: $default_font_weight;
+			text-align: center;
+		}
+	}
+}

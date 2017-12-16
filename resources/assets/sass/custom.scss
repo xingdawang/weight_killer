@@ -1,29 +1,3 @@
-/* User BMI, BFP table*/
-.wikitable {
-	background-color: $wikitable-bg-color;
-	color: $table_font_color;
-	margin: $table_margin;
-	border: $wikitable_border;
-	border-collapse: collapse;
-
-	tbody {
-		display: table-row-group;
-		vertical-align: middle;
-		border-color: inherit;
-
-		td, th {
-		display: table-cell;
-		vertical-align: inherit;
-		
-		}
-
-		tr > th, td {
-			border: $wikitable_border;
-			padding: $table_cell_padding;
-		}
-	}
-}
-
 /* Change the color in the wikitable */
 .selected-row{
 	background-color: $selected_row_color;
@@ -32,4 +6,16 @@
 /* Google Trendline Error*/
 #google-visualization-errors-all-1, #google-visualization-errors-all-3 {
 	display: none !important;
+}
+
+
+/* Calendar icon */
+.glyphicon {
+	margin: $calendar_icon_margin;
+}
+
+/* User update weight */
+#weight-update {
+	padding-left: $weight_place_holder;
+	padding-right: $weight_place_holder;
 }

@@ -28,3 +28,4 @@ require('./bootstrap-datepicker.js');
 require('./user-bmi.js');
 require('./user-bfp.js');
 require('./user_weight_trendline.js');
+require('./accordion.js');

@@ -1,62 +1,50 @@
 html {
     position: relative;
     min-height: 100%;
-}
-body {
-    color: $body_font_color;
-    font-family: 'Raleway', sans-serif;
 
-    .full-height {
-        height: $title_full_height;
-    }
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .position-ref {
-        position: relative;
-    }
-
-    .content {
-        text-align: center;
-        min-height: 100%;
-    }
-
-    .title {
-        font-size: $title_size;
-    }
-
-    .links > a {
+    body {
         color: $body_font_color;
-        padding: $nav_padding;
-        font-size: $nav_font_size;
-        font-weight: $nav_font_weight;
-        letter-spacing: $nav_letter_spacing;
-        text-decoration: none;
-        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+
+        .container {
+            margin-bottom: $body_bottom_margin;
+        }
+
+        .full-height {
+            height: $title_full_height;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .title {
+            font-size: $title_size;
+        }
+
+        .links > a {
+            color: $body_font_color;
+            padding: $nav_padding;
+            font-size: $nav_font_size;
+            font-weight: $nav_font_weight;
+            letter-spacing: $nav_letter_spacing;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: $title_margin_bottom;
+        }
+
+        .col-center-block{  
+            margin-left: auto;  
+            margin-right: auto;  
+        }
     }
-
-    .m-b-md {
-        margin-bottom: $title_margin_bottom;
-    }
-
-    .footer {
-        position: absolute; 
-        width: 100%;
-        bottom: 0;
-        background-color: $footer_background_color;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .col-center-block{  
-        margin-left: auto;  
-        margin-right: auto;  
-    }  
-
 }
-
-

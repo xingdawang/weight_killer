@@ -9,8 +9,7 @@
 			</div>
 		</div>
 		<div class="contact_us col-xs-12 col-sm-12 col-md-12 jumbotron-fluid">
-				contact us
-				<br>
+				<h2>contact us</h2>
 				<div class="details">
 					<div class="details_title">Author:</div>
 					<div class="details_content">

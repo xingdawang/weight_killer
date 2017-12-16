@@ -1,36 +1,55 @@
-//Body
+// Body
 $body_font_color: #636b6f;
 $title_size: 84px;
-$title_margin_bottom: 30px; 
+$title_margin_bottom: 30px;
 $title_full_height: 80vh;
+$body_bottom_margin: 30px;
+$default_font_size: 16px;
+$default_font_weight: 200;
+$default_background_color: #fff;
 
-//Nav
+// Panel
+$panel_title_font_size: 2rem;
+$panel_body_font_size: 2rem;
+$panel_body_line_height: 4rem;
+$panel_title_color: #333;
+$panel_border_color: #e4e5e7;
+$panel_link_padding: 10px 15px;
+
+// Loader
+$loader_border: 16px solid #f3f3f3;
+$loader_radius: 50%;
+$loader_border_top: 16px solid #3498db;
+$loader_size: 200px;
+$loader_margin: 50px auto;
+
+// Nav
 $nav_padding: 0 25px;
 $nav_font_size: 12px;
 $nav_font_weight: 600;
 $nav_letter_spacing: .1rem;
 
-//Copyright Bottom
+// Copyright Bottom
 $bottom_margin: 20px;
 $footer_height: 40px;
 $footer_background_color: #e7e7e7;
 
-//Dropdown
+// Dropdown
 $dropdown_divider: 1px solid #e9ecef;
 $dropdown_divider_margin: .5rem 0;
 
-//Wikitable
+// Wikitable
 $wikitable_bg_color: #f8f9fa;
 $wikitable_border: 1px solid #a2a9b1;
 $selected_row_color: #bbf;
 $table_font_color: #222;
-$table_cell_padding: 0.2em 0.4em;
+$table_cell_padding: 5px 10px;
 $table_margin: 1em 0;
 
-//Trendline
+// Trendline
 $trandline_title_color: #777;
 
-//Contact_us
+// Contact_us
 $map_height: 400px;
 $contact_us_margin: 0.5em 0;
 $contact_us_font_size: 40px;
@@ -38,3 +57,11 @@ $contact_us_padding: 15px;
 $details_title_size: 20px;
 $details_content_size: 15px;
 $details_content_margin: 0.5em 2em;
+
+// Custom Icon
+$calendar_icon_margin: 0 3.5px;
+$weight_place_holder: 15px;
+
+// Accordion
+$accordion_option_margin: 15px 0;
+$accordion_title_font_size: 20px;
