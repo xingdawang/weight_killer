@@ -12,7 +12,7 @@ return [
     */
     'longitude' =>env('LONGITUDE', 52.6651178),
     'latitude' =>env('LATITUDE', -8.5793299),
-    'home_zoom' => env('HOME_ZOOM', 18),
+    'home_zoom' => env('HOME_ZOOM', 13),
 
     /*
     |--------------------------------------------------------------------------
