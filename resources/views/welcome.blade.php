@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <div class="title m-b-md">
+        <div class="title m-b-md text-center">
             Lose Weight
         </div>
     </div>

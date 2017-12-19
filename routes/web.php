@@ -39,9 +39,24 @@ Route::get('/sitemap', 'SitemapController@index');
 Route::get('/sitemap.xml', function(){
 	return redirect('sitemap');
 });
+
+/** ??? */
 // Routing for viewing contact_us 
 Route::get('/contact_us', function () {
 	return view('contact_us');
 });
 // Routing for get google map
 Route::get('/contact_us', 'MapController@index');
+// Routing for set locale
+
+
+
+// Route::get('setlocale/{locale}', function ($locale) {
+//   if (in_array($locale, \Config::get('app.locales'))) {
+//     Session::put('locale', $locale);
+//   }
+//   return redirect()->back();
+// });
+
+// Routing for language switcher
+Route::post('/language', 'LanguageSwitchController@update')->name('language_switcher');
