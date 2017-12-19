@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="panel-title">
-                        Update Today Weight
+                        @lang('today_weight.update')
                     </div>
                 </div>
 
@@ -17,11 +17,11 @@
 
                         <!-- User weight -->
                         <div class="form-group{{ $errors->has('weight') ? ' has-error' : '' }}">
-                            <label for="weight" class="col-md-4 control-label">Weight</label>
+                            <label for="weight" class="col-md-4 control-label">@lang('today_weight.weight')</label>
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <input id="weight" type="text" class="form-control" name="weight" autofocus>
-                                    <span class="input-group-addon" id="weight-update">kg</span>
+                                    <span class="input-group-addon" id="weight-update">@lang('today_weight.kg')</span>
                                 </div>
                                 @if ($errors->has('weight'))
                                     <span class="help-block">
@@ -33,7 +33,7 @@
 
                         <!-- Weight added time -->
                         <div class="form-group{{ $errors->has('weight-time') ? ' has-error' : '' }}">
-                            <label for="weight_added_time" class="col-md-4 control-label">Time</label>
+                            <label for="weight_added_time" class="col-md-4 control-label">@lang('today_weight.time')</label>
                             <div class="col-md-6">
                                 <div class='input-group date' id='today_weight'>
                                     <input type='text' class="form-control" name="weight_added_time" >
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Update
+                                    @lang('today_weight.submit')
                                 </button>
                             </div>
                         </div>

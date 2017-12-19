@@ -50,24 +50,38 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <!-- Language Switcher -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="languageDropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-globe"></span><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {!! Form::open(['url' => '/language']) !!}
+                                    {{ csrf_field() }}
+                                    <li><button type="submit" name="locale" value="en">English</button></li>
+                                    <li><button type="submit" name="locale" value="cn">Chinese</button></li>
+                                {!! Form::close() !!}
+                                <!-- </form> -->
+                            </ul>
+                        </li>
+
                         @guest
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        <li><a href="{{ route('login') }}">@lang('app.login')</a></li>
+                        <li><a href="{{ route('register') }}">@lang('app.register')</a></li>
                         @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->name }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('user_update') }}">Profile</a></li>
-                                <li><a href="{{ route('user_view_weight') }}">Record today</a></li>
-                                <li><a href="{{ route('user_bmi') }}">Body Mass Index</a></li>
-                                <li><a href="{{ route('user_bfp') }}">Body Fat Percentage</a></li>
-                                 <li><a href="{{ route('user_weight_trendline') }}">Trendline</a></li>
+                                <li><a href="{{ route('user_update') }}">@lang('app.profile')</a></li>
+                                <li><a href="{{ route('user_view_weight') }}">@lang('app.record_today')</a></li>
+                                <li><a href="{{ route('user_bmi') }}">@lang('app.bmi')</a></li>
+                                <li><a href="{{ route('user_bfp') }}">@lang('app.bfp')</a></li>
+                                 <li><a href="{{ route('user_weight_trendline') }}">@lang('app.trendline')</a></li>
                                 <li><div class="dropdown-divider"></div></li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                    Logout
+                                    @lang('app.logout')
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
@@ -90,8 +104,8 @@
 <footer>
     <div class="content">
         <div class='links flex-center footer-copyright'>©{{ date('Y') }}  
-            <a href="{{ url('/contact_us') }}">CONTACT US</a>  
-            All Rights Reserved.
+            <a href="{{ url('/contact_us') }}">@lang('app.contact_us')</a>  
+            @lang('app.copy_right')
         </div>
     </div>
 </footer>
