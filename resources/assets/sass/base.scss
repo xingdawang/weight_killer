@@ -42,9 +42,16 @@ html {
             margin-bottom: $title_margin_bottom;
         }
 
-        .col-center-block{  
+        .col-center-block {  
             margin-left: auto;  
             margin-right: auto;  
+        }
+
+        .language-selector {
+            li > button {
+                background: transparent;
+                border: none;
+            }
         }
     }
 }

@@ -53,12 +53,15 @@
 
                         <!-- Language Switcher -->
                         <li class="dropdown">
-                            <a class="dropdown-toggle" id="languageDropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-globe"></span><span class="caret"></span></a>
-                            <ul class="dropdown-menu">
+                            <a class="dropdown-toggle" id="languageDropdownMenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-globe"></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu language-selector">
                                 {!! Form::open(['url' => '/language']) !!}
+                                    <li><button name="locale" value="en">English</button></li>
+                                    <li><button name="locale" value="cn">中文</button></li>
                                     {{ csrf_field() }}
-                                    <li><button type="submit" name="locale" value="en">English</button></li>
-                                    <li><button type="submit" name="locale" value="cn">Chinese</button></li>
                                 {!! Form::close() !!}
                                 <!-- </form> -->
                             </ul>

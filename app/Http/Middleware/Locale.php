@@ -3,9 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App;
-use Config;
-use Session;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
 
 class Locale
 {
@@ -21,15 +21,21 @@ class Locale
         $raw_locale = $request->server('HTTP_ACCEPT_LANGUAGE');
         $english = 'en';
         $chinese = 'zh';
+        $detected_locale = "";
+
         $contain_en = strpos($raw_locale, $english);
         $contain_cn = strpos($raw_locale, $chinese);
-        if($contain_cn !== false) {
-            $locale = 'cn';
-        }else if($contain_en !== false) {
-            $locale = 'en';
-        }else {
-            $locale = Config::get('app.locale');
+
+        if ($contain_cn !== false) {
+            $detected_locale = 'cn';
+        } else if($contain_en !== false) {
+            $detected_locale = 'en';
+        } else {
+            // If detect failed, use app default locale.
+            $detected_locale = App::getLocale();
         }
+
+        $locale = Session::get('locale') !== NULL ? Session::get('locale') : $detected_locale;
         App::setLocale($locale);
         return $next($request);
     }
