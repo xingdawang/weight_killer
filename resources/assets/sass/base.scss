@@ -51,6 +51,11 @@ html {
             li > button {
                 background: transparent;
                 border: none;
+                width: 100%;
+                text-align: left;
+                &:hover {
+                    font-weight: bold;
+                }
             }
         }
     }
